@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>idkwhy</title>
+    <script>
+        function myfunc(){
+            let v1 = document.getElementById("Film").value;
+            let v2 = document.getElementById("Rating").value;
+
+            if(v1=="" || v2==""){
+                window.alert('Fill the data')
+                return
+            }
+
+            let li = document.createElement('li');
+            li.textContent = v1 + " " + v2;
+            document.getElementById("list").appendChild(li);
+        }   
+    </script>
+</head>
+<body>
+
+    <p>Film</p>
+    <input type="text" name="" id="Film">
+
+    <p>Imdb Rating</p>
+    <input type="text" name="" id="Rating">
+
+    <button onclick="myfunc()">Submit</button>
+
+    <ul id="list">
+        
+    </ul>
+</body>
+</html>
